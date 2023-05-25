@@ -1,0 +1,1 @@
+	Aplicatie web care foloseste XAMPP, database, swagger + rest api.
