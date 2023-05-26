@@ -3,8 +3,6 @@
  * Library for common functions used across the backend
  */
 
-require_once('./config.php');
-
 // global variable to hold database connection
 global $db;
 $db = get_database();
@@ -35,9 +33,25 @@ function get_database() {
  * Close the database
  */
 function close_db() {
-	global $link;
+	global $db;
 
-	mysqli_close($link);
+	mysqli_close($db);
+}
+
+/**
+ * Create a prepared statement for the database
+ */
+function prepare_statement($query) {
+	global $db;
+	return mysqli_prepare($db, $query);
+}
+
+/**
+ * Create a prepared statement for the database
+ */
+function query($query) {
+	global $db;
+	return mysqli_query($db, $query);
 }
 
 
@@ -56,4 +70,15 @@ function dieWithError($msg = '', $error = 500)
 {
     http_response_code($error);
     die($msg);
+}
+
+/**
+ * Extract the api call from URL
+ */
+function get_api_call() {
+	global $_GET;
+	if (isset($_GET['api'])) {
+		return ($_GET['api']);	
+	}
+	return '';
 }

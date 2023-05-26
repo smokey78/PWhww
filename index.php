@@ -3,6 +3,7 @@
  * Main entry point in site
  */
 global $db;
+require_once('./config.php');
 require_once "./lib/common.php";
 
 
@@ -40,8 +41,9 @@ function renderError($message) {
 function renderMainContent() {
     ?>
         <h1>Produse</h1>
+        <div id="products"></div>
         <script type="text/javascript">
-            loadAllProducts();
+            loadAllProducts("products");
         </script>
     <?php
 }

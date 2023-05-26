@@ -10,7 +10,12 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/front-end/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="/front-end/js/jquery-3.7.0.min.js"></script>
     <script src="/front-end/js/bootstrap.min.js"></script>
+    
+    <script src="/front-end/js/ajax.js"></script>
+    <script src="/front-end/js/front.js"></script>
 
     <title>Super Shop</title>
 </head>
@@ -28,14 +33,14 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Cos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-                <span class="navbar-text">
-                    Navbar text with an inline element
+                <span class="navbar-tex ml-auto">
+                    Vizitator
                 </span>
             </div>
         </div>
@@ -45,3 +50,4 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <div id="errorMessage" class="alert alert-danger" style="display: none"></div>
