@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Cos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="/doc/index.html">Swagger OpenAPI docs</a>
                     </li>
                 </ul>
                 <span class="navbar-tex ml-auto">

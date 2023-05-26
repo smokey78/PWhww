@@ -26,10 +26,8 @@ die(); // stop here
  *   tags={"products"},
  *   path="/products",
  *   summary="List all products in the database",
- *   @OA\Parameter(ref="#/components/parameters/id"),
  *   @OA\Response(response=200, description="OK"),
- *   @OA\Response(response=401, description="Unauthorized"),
- *   @OA\Response(response=404, description="Not Found")
+ *   @OA\Response(response=5005, description="Internal error")
  * )
  */
 function get_all_products() {

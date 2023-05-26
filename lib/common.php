@@ -77,8 +77,12 @@ function dieWithError($msg = '', $error = 500)
  */
 function get_api_call() {
 	global $_GET;
+	global $_SERVER;
+	
 	if (isset($_GET['api'])) {
 		return ($_GET['api']);	
 	}
-	return '';
+	
+	$uri = $_SERVER['REQUEST_URI'];
+	return str_replace('/api/', '/', $uri);
 }
